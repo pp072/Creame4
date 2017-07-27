@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RCWindow</class>
+ <widget class="QMainWindow" name="RCWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>542</width>
+    <height>487</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RCWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="_layout"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>542</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSelectCamera"/>
+   <addaction name="actionShowEngineStatus"/>
+   <addaction name="separator"/>
+   <addaction name="actionSeeCamera"/>
+   <addaction name="actionWalkCamera"/>
+   <addaction name="actionFlyCamera"/>
+   <addaction name="separator"/>
+   <addaction name="actionFindTarget"/>
+   <addaction name="separator"/>
+   <addaction name="actionSetXProjection"/>
+   <addaction name="actionSetYProjection"/>
+   <addaction name="actionSetZProjection"/>
+   <addaction name="separator"/>
+   <addaction name="actionWireframeView"/>
+   <addaction name="actionDebugView"/>
+   <addaction name="actionDebugView2"/>
+   <addaction name="actionDebugView3"/>
+   <addaction name="actionGridView"/>
+   <addaction name="separator"/>
+   <addaction name="actionAlwaysUpdate"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSeeCamera">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/glaz_kub1.png</normaloff>:/instruments/icons/instruments/camera_nav/glaz_kub1.png</iconset>
+   </property>
+   <property name="text">
+    <string>SeeCamera</string>
+   </property>
+   <property name="shortcut">
+    <string>4</string>
+   </property>
+  </action>
+  <action name="actionWalkCamera">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/sled_kub1.png</normaloff>:/instruments/icons/instruments/camera_nav/sled_kub1.png</iconset>
+   </property>
+   <property name="text">
+    <string>WalkCamera</string>
+   </property>
+   <property name="shortcut">
+    <string>5</string>
+   </property>
+  </action>
+  <action name="actionFindTarget">
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/target_find1.png</normaloff>:/instruments/icons/instruments/camera_nav/target_find1.png</iconset>
+   </property>
+   <property name="text">
+    <string>FindTarget</string>
+   </property>
+   <property name="shortcut">
+    <string>F</string>
+   </property>
+  </action>
+  <action name="actionSetXProjection">
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/X_cube1.png</normaloff>:/instruments/icons/instruments/camera_nav/X_cube1.png</iconset>
+   </property>
+   <property name="text">
+    <string>setXProjection</string>
+   </property>
+   <property name="shortcut">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="actionSetYProjection">
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/Y_cube1.png</normaloff>:/instruments/icons/instruments/camera_nav/Y_cube1.png</iconset>
+   </property>
+   <property name="text">
+    <string>setYProjection</string>
+   </property>
+   <property name="shortcut">
+    <string>2</string>
+   </property>
+  </action>
+  <action name="actionSetZProjection">
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/Z_cube1.png</normaloff>:/instruments/icons/instruments/camera_nav/Z_cube1.png</iconset>
+   </property>
+   <property name="text">
+    <string>setZProjection</string>
+   </property>
+   <property name="shortcut">
+    <string>3</string>
+   </property>
+  </action>
+  <action name="actionFlyCamera">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/fly_kub1.png</normaloff>:/instruments/icons/instruments/camera_nav/fly_kub1.png</iconset>
+   </property>
+   <property name="text">
+    <string>FlyCamera</string>
+   </property>
+   <property name="shortcut">
+    <string>6</string>
+   </property>
+  </action>
+  <action name="actionWireframeView">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/wireframe.png</normaloff>:/instruments/icons/instruments/camera_nav/wireframe.png</iconset>
+   </property>
+   <property name="text">
+    <string>wireframeView</string>
+   </property>
+  </action>
+  <action name="actionDebugView">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/debug.png</normaloff>:/instruments/icons/instruments/camera_nav/debug.png</iconset>
+   </property>
+   <property name="text">
+    <string>debugView</string>
+   </property>
+  </action>
+  <action name="actionAlwaysUpdate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/arrow_refresh.png</normaloff>:/instruments/icons/instruments/camera_nav/arrow_refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>alwaysUpdate</string>
+   </property>
+  </action>
+  <action name="actionSelectCamera">
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/tree/icons/Cam.png</normaloff>:/tree/icons/Cam.png</iconset>
+   </property>
+   <property name="text">
+    <string>selectCamera</string>
+   </property>
+  </action>
+  <action name="actionGridView">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/editor/icons/grid.png</normaloff>:/editor/icons/grid.png</iconset>
+   </property>
+   <property name="text">
+    <string>gridView</string>
+   </property>
+   <property name="shortcut">
+    <string>G</string>
+   </property>
+  </action>
+  <action name="actionShowEngineStatus">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/Help_IC.png</normaloff>:/instruments/icons/instruments/camera_nav/Help_IC.png</iconset>
+   </property>
+   <property name="text">
+    <string>showEngineStatus</string>
+   </property>
+  </action>
+  <action name="actionDebugView2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/debug2.png</normaloff>:/instruments/icons/instruments/camera_nav/debug2.png</iconset>
+   </property>
+   <property name="text">
+    <string>debugView2</string>
+   </property>
+  </action>
+  <action name="actionDebugView3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/debug3.png</normaloff>:/instruments/icons/instruments/camera_nav/debug3.png</iconset>
+   </property>
+   <property name="text">
+    <string>debugView3</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../src/editor.qrc"/>
+ </resources>
+ <connections/>
+</ui>

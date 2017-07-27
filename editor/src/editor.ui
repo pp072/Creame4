@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>editorClass</class>
+ <widget class="QMainWindow" name="editorClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>997</width>
+    <height>843</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>editor</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>997</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>window</string>
+    </property>
+    <addaction name="actionAddWindow"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>edit</string>
+    </property>
+    <addaction name="actionMouseSelectionMode"/>
+    <addaction name="actionMoveObject"/>
+    <addaction name="actionRotateObject"/>
+    <addaction name="actionScaleObject"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionNewScene"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuWindow"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNewScene"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionMouseSelectionMode"/>
+   <addaction name="actionMoveObject"/>
+   <addaction name="actionRotateObject"/>
+   <addaction name="actionScaleObject"/>
+   <addaction name="actionLOC"/>
+   <addaction name="separator"/>
+   <addaction name="actionAddWindow"/>
+   <addaction name="separator"/>
+   <addaction name="actionTest"/>
+   <addaction name="separator"/>
+   <addaction name="actionRun_game"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget_2">
+   <property name="windowTitle">
+    <string>Main Viewer</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="NodesTree_dockWidget">
+   <property name="windowTitle">
+    <string>Scene Elements from Engine</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="Property_dockWidget">
+   <property name="windowTitle">
+    <string>Properties</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="m_logWidgetDock">
+   <property name="windowTitle">
+    <string>Log</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="python_dockWidget">
+   <property name="windowTitle">
+    <string>Script</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="tree">
+   <property name="windowTitle">
+    <string>Scene Elements from File</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="SceneTreeWidget" name="m_sceneTreeWidget"/>
+  </widget>
+  <widget class="QDockWidget" name="prop">
+   <property name="windowTitle">
+    <string>Node Properties</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="NodeWidget" name="m_nodeWidget"/>
+  </widget>
+  <action name="actionAddWindow">
+   <property name="icon">
+    <iconset resource="editor.qrc">
+     <normaloff>:/editor/icons/New_window.png</normaloff>:/editor/icons/New_window.png</iconset>
+   </property>
+   <property name="text">
+    <string>addWindow</string>
+   </property>
+  </action>
+  <action name="actionMouseSelectionMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="editor.qrc">
+     <normaloff>:/instruments/icons/instruments/kursor.png</normaloff>:/instruments/icons/instruments/kursor.png</iconset>
+   </property>
+   <property name="text">
+    <string>MouseSelectionMode</string>
+   </property>
+   <property name="toolTip">
+    <string>MouseSelectionMode</string>
+   </property>
+   <property name="shortcut">
+    <string>Space</string>
+   </property>
+  </action>
+  <action name="actionMoveObject">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="editor.qrc">
+     <normaloff>:/instruments/icons/instruments/move2.png</normaloff>:/instruments/icons/instruments/move2.png</iconset>
+   </property>
+   <property name="text">
+    <string>MoveObject</string>
+   </property>
+   <property name="toolTip">
+    <string>MoveObject</string>
+   </property>
+   <property name="shortcut">
+    <string>V</string>
+   </property>
+  </action>
+  <action name="actionRotateObject">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="RotateObject" resource="editor.qrc">
+     <normaloff>:/instruments/icons/instruments/rotate2.png</normaloff>:/instruments/icons/instruments/rotate2.png</iconset>
+   </property>
+   <property name="text">
+    <string>RotateObject</string>
+   </property>
+   <property name="shortcut">
+    <string>C</string>
+   </property>
+  </action>
+  <action name="actionScaleObject">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="editor.qrc">
+     <normaloff>:/instruments/icons/instruments/Scale.png</normaloff>:/instruments/icons/instruments/Scale.png</iconset>
+   </property>
+   <property name="text">
+    <string>ScaleObject</string>
+   </property>
+   <property name="toolTip">
+    <string>ScaleObject</string>
+   </property>
+   <property name="shortcut">
+    <string>X</string>
+   </property>
+  </action>
+  <action name="actionLOC">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="editor.qrc">
+     <normaloff>:/instruments/icons/instruments/LOC.png</normaloff>:/instruments/icons/instruments/LOC.png</iconset>
+   </property>
+   <property name="text">
+    <string>LOC</string>
+   </property>
+  </action>
+  <action name="actionNewScene">
+   <property name="icon">
+    <iconset resource="editor.qrc">
+     <normaloff>:/editor/icons/New_file.png</normaloff>:/editor/icons/New_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>newScene</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="editor.qrc">
+     <normaloff>:/editor/icons/Open_file.png</normaloff>:/editor/icons/Open_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="editor.qrc">
+     <normaloff>:/editor/icons/Save_file.png</normaloff>:/editor/icons/Save_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>save</string>
+   </property>
+  </action>
+  <action name="m_actionRemove">
+   <property name="icon">
+    <iconset resource="editor.qrc">
+     <normaloff>:/tree/icons/Delete.png</normaloff>:/tree/icons/Delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </action>
+  <action name="m_actionPaste">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/tree/icons/paste.png</normaloff>:/tree/icons/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="m_actionCut">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/tree/icons/cut.png</normaloff>:/tree/icons/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="m_actionCopy">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/tree/icons/copy.png</normaloff>:/tree/icons/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string>test</string>
+   </property>
+  </action>
+  <action name="actionRun_game">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="editor.qrc">
+     <normaloff>:/EditorContents/EditorContents/btScriptRun-off.png</normaloff>:/EditorContents/EditorContents/btScriptRun-off.png</iconset>
+   </property>
+   <property name="text">
+    <string>run_game</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>SceneTreeWidget</class>
+   <extends>QWidget</extends>
+   <header>scenetreewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NodeWidget</class>
+   <extends>QTreeView</extends>
+   <header>nodewidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="editor.qrc"/>
+  <include location="EditorContents/EditorContents.qrc"/>
+ </resources>
+ <connections/>
+</ui>

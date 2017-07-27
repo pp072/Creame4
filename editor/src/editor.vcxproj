@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{67EDB504-C645-4175-80CC-BFEC306D0523}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)../Build\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)../Build\$(Configuration)\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>PYTHONQT_USE_RELEASE_PYTHON_FALLBACK;UNICODE;WIN32;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;_WINDOWS;QSCINTILLA_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL;$(SolutionDir)../Horde3DEngine;$(SolutionDir)../Horde3DUtils;$(SolutionDir)/NodesTree_d;$(SolutionDir)/PropertyEditor;$(SolutionDir)/rc_win_manager;$(SolutionDir)/add_incl;$(SolutionDir)PythonQT48\src;$(SolutionDir)\PythonIDE;$(SolutionDir)\QsettingUI;$(SolutionDir)\Python-2.6.8\PC;$(SolutionDir)\Python-2.6.8\include;$(SolutionDir)\QPropertyEditor;$(SolutionDir);$(SolutionDir)\QXmlTree;$(SolutionDir)../GameEngine\GameEngineCore;$(SolutionDir)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName)_d.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)../Build\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;QtCored4.lib;QtGuid4.lib;QtOpenGLd4.lib;opengl32.lib;glu32.lib;Horde3D_d.lib;Horde3DUtils_d.lib;NodesTree_d.lib;PropertyEditor_d.lib;rc_win_manager_d.lib;python26.lib;qscintilla2_d.lib;PythonQt_d.lib;PythonQt_QtAll_d.lib;PythonIDE_d.lib;QPropertyEditor_d.lib;QXmlTree_d.lib;GameEngineCore_d.lib;GameSceneGraphComponent_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>copy /Y "$(SolutionDir)\Python-2.6.8\PCbuild\python26.dll" "$(SolutionDir)../Build\$(Configuration)\python26.dll"
+copy /Y "$(SolutionDir)\Python-2.6.8\PCbuild\python26.lib" "$(SolutionDir)../Build\$(Configuration)\python26.lib"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL;$(SolutionDir)../Horde3DEngine;$(SolutionDir)../Horde3DUtils;$(SolutionDir)/NodesTree_d;$(SolutionDir)/PropertyEditor;$(SolutionDir)/rc_win_manager;$(SolutionDir)/add_incl;$(SolutionDir)PythonQT48\src;$(SolutionDir)\PythonIDE;$(SolutionDir)\QsettingUI;$(SolutionDir)\Python-2.6.8\PC;$(SolutionDir)\Python-2.6.8\include;$(SolutionDir)\QPropertyEditor;$(SolutionDir);$(SolutionDir)\QXmlTree;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)../Build\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;QtCore4.lib;QtGui4.lib;QtOpenGL4.lib;opengl32.lib;glu32.lib;Horde3D.lib;Horde3DUtils.lib;NodesTree.lib;PropertyEditor.lib;rc_win_manager.lib;python26.lib;qscintilla2.lib;PythonQt.lib;PythonQt_QtAll.lib;PythonIDE.lib;QPropertyEditor.lib;QXmlTree.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>copy /Y "$(SolutionDir)\Python-2.6.8\PCbuild\python26.dll" "$(SolutionDir)../Build\$(Configuration)\python26.dll"
+copy /Y "$(SolutionDir)\Python-2.6.8\PCbuild\python26.lib" "$(SolutionDir)../Build\$(Configuration)\python26.lib"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="baseinstrument.cpp" />
+    <ClCompile Include="CustomTypes.cpp" />
+    <ClCompile Include="debugview.cpp" />
+    <ClCompile Include="editor.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_baseinstrument.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_debugview.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_editor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_game.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_GameObject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_gridview.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_instruments.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_log_window.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_NodeWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PlugInManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCameraNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCameraNodePage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QEmitterNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QGroupNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QJointNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QLightNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QLightNodePage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QMeshNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QModelNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QReferenceNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QReferenceNodePage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QSceneNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SceneFilePage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SceneTreeModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SceneTreeView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SceneTreeWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_selectobjectbymouse.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Vec3fProperty.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_editor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_baseinstrument.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_debugview.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_editor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_game.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_GameObject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_gridview.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_instruments.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_log_window.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_NodeWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PlugInManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCameraNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCameraNodePage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QEmitterNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QGroupNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QJointNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QLightNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QLightNodePage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QMeshNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QModelNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QReferenceNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QReferenceNodePage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QSceneNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SceneFilePage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SceneTreeModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SceneTreeView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SceneTreeWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_selectobjectbymouse.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Vec3fProperty.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="gridview.cpp" />
+    <ClCompile Include="instruments.cpp" />
+    <ClCompile Include="log_window.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="NodeWidget.cpp" />
+    <ClCompile Include="PlugInManager.cpp" />
+    <ClCompile Include="QCameraNode.cpp" />
+    <ClCompile Include="QCameraNodePage.cpp" />
+    <ClCompile Include="QEmitterNode.cpp" />
+    <ClCompile Include="QGroupNode.cpp" />
+    <ClCompile Include="QJointNode.cpp" />
+    <ClCompile Include="QLightNode.cpp" />
+    <ClCompile Include="QLightNodePage.cpp" />
+    <ClCompile Include="QMeshNode.cpp" />
+    <ClCompile Include="QModelNode.cpp" />
+    <ClCompile Include="QReferenceNode.cpp" />
+    <ClCompile Include="QReferenceNodePage.cpp" />
+    <ClCompile Include="QSceneNode.cpp" />
+    <ClCompile Include="SceneFile.cpp" />
+    <ClCompile Include="SceneFilePage.cpp" />
+    <ClCompile Include="SceneTreeModel.cpp" />
+    <ClCompile Include="SceneTreeView.cpp" />
+    <ClCompile Include="SceneTreeWidget.cpp" />
+    <ClCompile Include="SceneWizard.cpp" />
+    <ClCompile Include="selectobjectbymouse.cpp" />
+    <ClCompile Include="Vec3fProperty.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="editor.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing editor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing editor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="editor.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CustomTypes.h" />
+    <CustomBuild Include="debugview.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing debugview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing debugview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <ClInclude Include="def_settings.h" />
+    <CustomBuild Include="GameObject.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing GameObject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing GameObject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="game.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing game.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing game.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <ClInclude Include="GeneratedFiles\ui_log_window.h" />
+    <ClInclude Include="GeneratedFiles\ui_QCameraNodePage.h" />
+    <ClInclude Include="GeneratedFiles\ui_QLightNodePage.h" />
+    <ClInclude Include="GeneratedFiles\ui_QReferenceNodePage.h" />
+    <ClInclude Include="GeneratedFiles\ui_SceneFilePage.h" />
+    <CustomBuild Include="Vec3fProperty.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing Vec3fProperty.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing Vec3fProperty.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QLightNodePage.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QLightNodePage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QLightNodePage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QCameraNodePage.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QCameraNodePage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QCameraNodePage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QReferenceNodePage.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QReferenceNodePage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QReferenceNodePage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QSceneNode.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QSceneNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QSceneNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="PlugInManager.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PlugInManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PlugInManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <ClInclude Include="GeneratedFiles\ui_SceneTreeWidget.h" />
+    <CustomBuild Include="QReferenceNode.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QReferenceNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QReferenceNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QModelNode.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QModelNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QModelNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QLightNode.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QLightNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QLightNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QGroupNode.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QGroupNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QGroupNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QMeshNode.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QMeshNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QMeshNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QJointNode.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QJointNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QJointNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QEmitterNode.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QEmitterNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QEmitterNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QCameraNode.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QCameraNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QCameraNode.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="NodeWidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing NodeWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing NodeWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gridview.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing gridview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing gridview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <ClInclude Include="SceneFile.h" />
+    <CustomBuild Include="SceneFilePage.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SceneFilePage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SceneFilePage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="SceneTreeModel.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SceneTreeModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SceneTreeModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="SceneTreeWidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SceneTreeWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SceneTreeWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="SceneTreeView.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SceneTreeView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SceneTreeView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <ClInclude Include="SceneWizard.h" />
+    <CustomBuild Include="log_window.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing log_window.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing log_window.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="selectobjectbymouse.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing selectobjectbymouse.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing selectobjectbymouse.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="instruments.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing instruments.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing instruments.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <CustomBuild Include="baseinstrument.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing baseinstrument.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DPYTHONQT_USE_RELEASE_PYTHON_FALLBACK -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS -DQSCINTILLA_DLL  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree" "-I$(SolutionDir)..\GameEngine\GameEngineCore" "-I$(SolutionDir)\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing baseinstrument.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -D_WINDOWS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)..\Horde3DEngine" "-I$(SolutionDir)..\Horde3DUtils" "-I$(SolutionDir)\NodesTree_d" "-I$(SolutionDir)\PropertyEditor" "-I$(SolutionDir)\rc_win_manager" "-I$(SolutionDir)\add_incl" "-I$(SolutionDir)PythonQT48\src" "-I$(SolutionDir)\PythonIDE" "-I$(SolutionDir)\QsettingUI" "-I$(SolutionDir)\Python-2.6.8\PC" "-I$(SolutionDir)\Python-2.6.8\include" "-I$(SolutionDir)\QPropertyEditor" "-I$(SolutionDir)\." "-I$(SolutionDir)\QXmlTree"</Command>
+    </CustomBuild>
+    <ClInclude Include="GeneratedFiles\ui_editor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="editor.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="log_window.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="SceneFilePage.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QLightNodePage.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QCameraNodePage.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QReferenceNodePage.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="SceneTreeWidget.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" MocDir=".\GeneratedFiles\$(ConfigurationName)" MocOptions="" RccDir=".\GeneratedFiles" lupdateOnBuild="0" lupdateOptions="" lreleaseOptions="" QtVersion_x0020_Win32="4.8.5" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

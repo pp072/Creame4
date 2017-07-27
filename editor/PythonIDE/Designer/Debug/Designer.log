@@ -1,0 +1,34 @@
+﻿Сборка начата 30.06.2015 16:10:16.
+     1>Проект "D:\LocalProjects\Creame4\editor\PythonIDE\Designer\Designer.vcxproj" в узле 4 (целевые объекты build).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(298,5): warning MSB8004: каталог Intermediate заканчивается не косой чертой.  Этот экземпляр построения добавит косую черту, поскольку она необходима для правильного определения каталога Intermediate.
+     1>InitializeBuildStatus:
+         Создание "Debug\Designer.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       CustomBuild:
+         Для всех выходных данных обновления не требуется.
+       ClCompile:
+         Для всех выходных данных обновления не требуется.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /ID:\Qt\4.8.4\include /I.\GeneratedFiles\Debug /ID:\Qt\4.8.4\include\QtCore /ID:\Qt\4.8.4\include\QtGui /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_LARGEFILE_SUPPORT /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D DLL_DESIGNER_NONCLIENT_BUILD /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\qrc_designer.cpp /MP 
+         qrc_designer.cpp
+       ResourceCompile:
+         Для всех выходных данных обновления не требуется.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(D:\LocalProjects\Creame4\editor\../Build\Debug\designer.dll) не соответствует значению свойства выходного файла (D:\LocalProjects\Creame4\Build\Debug\designer_d.dll) для Linker. Это может привести к неправильному построению проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(designer) не соответствует значению свойства выходного файла (designer_d) для Linker. Это может привести к неправильному построению проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\LocalProjects\Creame4\editor\../Build\Debug\designer_d.dll" /NOLOGO /LIBPATH:D:\Qt\4.8.4\lib D:\Qt\4.8.4\lib\QtDesignerComponentsd4.lib D:\Qt\4.8.4\lib\QtDesignerd4.lib qtmaind.lib QtCored4.lib QtGuid4.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\designer.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\LocalProjects\Creame4\Build\Debug\designer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\LocalProjects\Creame4\editor\../Build\Debug\designer_d.lib" /MACHINE:X86 /DLL Debug\Designer.res
+         Debug\designer.obj
+         Debug\moc_designer.obj
+         Debug\qrc_designer.obj
+         Debug\main.obj
+         LINK : не найден или не выполнена сборка D:\LocalProjects\Creame4\editor\../Build\Debug\designer_d.dll при последней инкрементной компоновке; выполняется полная компоновка
+            Создается библиотека D:\LocalProjects\Creame4\editor\../Build\Debug\designer_d.lib и объект D:\LocalProjects\Creame4\editor\../Build\Debug\designer_d.exp
+         Designer.vcxproj -> D:\LocalProjects\Creame4\editor\../Build\Debug\designer.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\LocalProjects\Creame4\editor\../Build\Debug\designer_d.dll;#2" /manifest Debug\designer.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Файл "Debug\Designer.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\Designer.lastbuildstate".
+     1>Построение проекта "D:\LocalProjects\Creame4\editor\PythonIDE\Designer\Designer.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:04.72

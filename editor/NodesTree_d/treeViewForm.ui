@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>treeViewForm</class>
+ <widget class="QMainWindow" name="treeViewForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>193</width>
+    <height>242</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>treeViewForm</string>
+  </property>
+   <widget class="QTreeView" name="treeView">
+     <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="lineWidth">
+       <number>1</number>
+     </property>
+     <attribute name="headerDefaultSectionSize">
+       <number>100</number>
+     </attribute>
+     <attribute name="headerStretchLastSection">
+       <bool>true</bool>
+     </attribute>
+   </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionRefresh"/>
+   <addaction name="actionFindNodeInTree"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionInsert_row">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/classificationofageform/images/plus-circle.png</normaloff>:/classificationofageform/images/plus-circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Insert row</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Ins</string>
+   </property>
+  </action>
+  <action name="actionInsert_child_row">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/classificationofageform/images/plus-small-circle.png</normaloff>:/classificationofageform/images/plus-small-circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Insert child row</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Home</string>
+   </property>
+  </action>
+  <action name="actionDelete_row">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/classificationofageform/images/minus-circle.png</normaloff>:/classificationofageform/images/minus-circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete row</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Del</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/tree/icons/arrow_refresh.png</normaloff>:/tree/icons/arrow_refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+   <property name="toolTip">
+    <string>Refresh</string>
+   </property>
+  </action>
+  <action name="actionFindNodeInTree">
+   <property name="icon">
+    <iconset resource="../src/editor.qrc">
+     <normaloff>:/instruments/icons/instruments/camera_nav/target_find1.png</normaloff>:/instruments/icons/instruments/camera_nav/target_find1.png</iconset>
+   </property>
+   <property name="text">
+    <string>findNodeInTree</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../src/editor.qrc"/>
+ </resources>
+ <connections/>
+</ui>
